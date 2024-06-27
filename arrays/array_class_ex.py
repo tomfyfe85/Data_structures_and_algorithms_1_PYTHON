@@ -14,21 +14,30 @@ class ArrayClass:
         self.lst.append(item)
         
     def removeAt(self, index):
+        "removes item at given index from self.list"
         self.lst = [item for i, item in enumerate(self.lst) if i != index]
         # del self.lst[index]
 
     def indexOf(self, item_to_find):
-        return self.lst.index(item_to_find)
+        for i, item in enumerate(self.lst):
+            if item == item_to_find:
+                return i
+        # return self.lst.index(item_to_find)
         
+        # final = [i for i, item in enumerate(self.lst) if item == item_to_find]
+        # return final[]
     
     
 array = ArrayClass()
 array.insert(10)
 array.insert(20)
-array.insert(30)
+array.insert(20)
 
-array.removeAt(1)
-for item in array.lst:
-        print(item)
+array.insert(30)
+array.insert(20)
+
+
+# for item in array.lst:
+#         print(item)
         
-        
+print(array.indexOf(20))        
