@@ -48,6 +48,5 @@ array.insert(23)
 array.insert(20)
 array.insert(80)
 array.insert(30)
-
 array.insertAtIndex(2, "HI")
 array.print()
