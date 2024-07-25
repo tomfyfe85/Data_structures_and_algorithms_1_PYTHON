@@ -11,7 +11,7 @@ class ArrayClass:
     def insert(self, item):
         self.lst.append(item)
 
-    def removeAt(self, index):
+    def remove_at(self, index):
         if index >= len(self.lst):
             raise ValueError(
                 f"index must be in the acceptable range (0 - {len(self.lst)})"
